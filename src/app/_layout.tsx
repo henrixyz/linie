@@ -18,6 +18,8 @@ export default function Loyaut() {
         
         <Stack.Screen name="index" options={{
             title: "Cadastro"}}/>
+        <Stack.Screen name="profile" options={{
+            title: "Cadastro"}}/>
         {/* <Stack.Screen name="profile" options={{
             title: "Linie",
             headerTitleAlign: 'center',
