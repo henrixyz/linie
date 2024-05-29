@@ -1,6 +1,6 @@
 import React from 'expo';
 import { StatusBar } from 'expo-status-bar'
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { Link } from 'expo-router'
 import { Slot } from 'expo-router'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -16,56 +16,49 @@ return (
     
     <View style={styles.cardContainer}>
       
+        <Link href={'../inHome/consultas'}>
       <TouchableOpacity style={styles.card}>
         <LinearGradient
-            colors={['#d1a2f3', '#a278e7']}
+            colors={['#000', '#272727']}
             style={styles.card}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 1 }}
             >
-          <View style={styles.image}></View>
-          <Text style={styles.cardText}>consultas</Text>
+          <Image source={require('../assets/img/linie_med.png')} style={styles.image}/>
+          <Text style={styles.cardTextLeft}>consultas</Text>
         </LinearGradient>
       </TouchableOpacity>
+      </Link>
 
+
+      <Link href={'../inHome/calmDown'}>
       <TouchableOpacity style={styles.card}>
         <LinearGradient 
-            colors={['#73cd96', '#8ce6ae']} 
+            colors={['#000', '#272727']} 
             style={styles.card}
             start={{ x: 0, y: 0 }} 
             end={{ x: 1, y: 1 }}
             >
-          <Text style={styles.cardText}>calma...</Text>
-          <View style={styles.image}></View>
+          <Text style={styles.cardTextRight}>calma...</Text>
+          <Image source={require('../assets/img/linie_nerd.png')} style={styles.image}/>
         </LinearGradient>
       </TouchableOpacity>
+      </Link>
 
-
+      <Link href={'../inHome/calmDown'}>
       <TouchableOpacity style={styles.card}>
         <LinearGradient 
-            colors={['#b2dafa', '#6a9eda']}
+            colors={['#000', '#272727']}
             style={styles.card}
             start={{ x: 0, y: 0 }}
-            end={{ x: 1, y: 1 }}
+            end={{ x: 1, y: 1 }}  
             >
-          <View style={styles.image}></View>
-          <Text style={styles.cardText}>ajuda</Text>
+          <Image source={require('../assets/img/linie_sad.png')} style={styles.image}/>
+          <Text style={styles.cardTextLeft}>ajuda</Text>
         </LinearGradient>
       </TouchableOpacity>
-
-
-      {/* <TouchableOpacity style={styles.card}>
-        <Text style={styles.cardText}>Ligação</Text>
-      </TouchableOpacity> */}
+      </Link>
       
-      {/* <TouchableOpacity style={styles.card}>
-        <Text style={styles.cardText}>Jogo</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.card}>
-        <Text style={styles.cardText}>Configuraç</Text>
-      </TouchableOpacity> */}
-
     </View>
   </View>
      
@@ -98,17 +91,22 @@ card: {
   marginRight: 10,
   borderRadius: 10,
   flexDirection: 'row',
-  justifyContent: 'space-between',
   alignItems: 'center',
 },
 image: {
   width: 150,
   height: 150,
   fontSize: 30,
-  backgroundColor:'#000'
 },
-cardText: {
+cardTextLeft: {
   fontSize: 30,
+ 
+  fontWeight: 'bold',
+  color: 'white'
+},
+cardTextRight: {
+  fontSize: 30,
+
   fontWeight: 'bold',
   color: 'white'
 },

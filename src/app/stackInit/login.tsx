@@ -2,11 +2,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react'
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity} from 'react-native';
-// import { NavigationContainer } from '@react-navigation/native';
 import { Link } from 'expo-router'
 import { Picker } from '@react-native-picker/picker';
-
-
 // // import { Teste } from './src/Text'
 
 export default function Login() {
@@ -114,7 +111,6 @@ const styles = StyleSheet.create({
   picker: {
     height: 50,
     width: 150,
-    borderRadius: 70,
     padding:34,
     marginLeft: 50,
     marginRight: 50,

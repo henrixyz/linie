@@ -6,7 +6,6 @@ export default function Search() {
   return (
     <View style={styles.container}>
         <TextInput placeholder="pesquisar:" style={styles.card}></TextInput>
-        <Text>search</Text>
     </View>
 )};
 
@@ -14,7 +13,7 @@ export default function Search() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#EDEDED',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
     width:'95%',
     height:'6%',
     paddingLeft:15,
-    backgroundColor:'#DEDEDE',
+    backgroundColor:'#fff',
     fontSize: 15,
     borderRadius: 30,
 

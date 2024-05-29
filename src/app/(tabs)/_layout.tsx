@@ -33,9 +33,9 @@ export default function TabLayout() {
             tabBarIcon: ({size, color}) => <Ionicons name="search" size={size} color={color}/>
             }}
             />
-      <Tabs.Screen name="configg" 
+      <Tabs.Screen name="mensage" 
           options={{
-            title: "mensagens",
+            title: "Mensagens",
             tabBarIcon: ({size, color}) => <Ionicons name="chatbubble-ellipses" size={size} color={color}/>
             }}
             />

@@ -8,7 +8,6 @@ export default function Loyaut() {
    
     <Stack
     screenOptions={{
-      
       headerStyle:{
         backgroundColor: "#EDEDED"
         },

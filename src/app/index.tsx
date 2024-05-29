@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image} from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import { Link } from 'expo-router';
 
 export default function App() {
@@ -8,12 +8,25 @@ export default function App() {
        <StatusBar backgroundColor="#000000"/>
 
       {/* <View style={styles.image} ></View> */}
-      <Image source={require('./assets/img/linieDefault.png')} style={styles.image}/>
+      <Image source={require('./assets/img/linie_workout.png')} style={styles.image}/>
 
       <Text style={styles.header} > Seja Bem-Vindo! </Text>
       <View style={styles.trecho}>
-      <Link href='stackInit/signin' style={styles.btmInit}>criar uma conta</Link>
-      <Link href='stackInit/login' style={styles.btmInit} >já tem? Login</Link>
+
+      {/* <Link href='stackInit/signin' style={styles.btmInit}>Criar uma conta</Link>
+      <Link href='stackInit/login' style={styles.btmInit}>Já tem? Entrar</Link> */}
+
+      <Link href='stackInit/signin' asChild>
+      <TouchableOpacity>
+        <Text style={styles.btmInit}>Criar uma Conta</Text>
+      </TouchableOpacity>
+      </Link>
+
+      <Link href='stackInit/login' asChild>
+      <TouchableOpacity>
+        <Text style={styles.btmInit}>Já tem? Entrar</Text>
+      </TouchableOpacity>
+      </Link>
       {/* <Link href='(tabs)/profile' style={styles.btmEnter}>já tem login? entrar</Link> */}
 
     </View>
@@ -32,7 +45,7 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     marginTop: 70,
-    backgroundColor: 'pink'
+
   },
   header:{
     fontWeight: 'bold',
@@ -62,6 +75,6 @@ const styles = StyleSheet.create({
     marginBottom:20,
     color:'white',
     textAlign:'center',
-    alignItems:'center'
+    alignItems: 'center'
   }
 });
