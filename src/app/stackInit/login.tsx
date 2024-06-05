@@ -45,7 +45,7 @@ export default function Login() {
 
 
 <TouchableOpacity style={styles.btmCadastro} onPress={()=>cadastro()}>
-      <Link href={"../(tabs)"} style={{color:'white', textAlign:'center'}}>entrar</Link>
+      <Link href={"../(tabs)/"}style={{color:'white', textAlign:'center'}}>entrar</Link>
 </TouchableOpacity>
 
         </View>

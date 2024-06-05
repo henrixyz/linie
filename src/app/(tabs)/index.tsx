@@ -1,9 +1,9 @@
 import React from 'expo';
-import { StatusBar } from 'expo-status-bar'
-import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { Link } from 'expo-router'
-import { Slot } from 'expo-router'
-import { LinearGradient } from 'expo-linear-gradient'
+import { StatusBar } from 'expo-status-bar';
+import { View, Text, StyleSheet, Image } from 'react-native';
+import { Link } from 'expo-router';
+import { Slot } from 'expo-router';
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 const Home = () => {
@@ -11,13 +11,12 @@ const Home = () => {
 
 return (
   <View style={styles.container}>
-    <StatusBar backgroundColor='black'/>
+    <StatusBar backgroundColor='white'/>
     <Slot/>
     
     <View style={styles.cardContainer}>
       
-        <Link href={'../inHome/consultas'}>
-      <TouchableOpacity style={styles.card}>
+        <Link href={'../inHome/calmDown'} style={styles.card}>
         <LinearGradient
             colors={['#000', '#272727']}
             style={styles.card}
@@ -25,28 +24,24 @@ return (
             end={{ x: 1, y: 1 }}
             >
           <Image source={require('../assets/img/linie_med.png')} style={styles.image}/>
-          <Text style={styles.cardTextLeft}>consultas</Text>
+          <Text style={styles.cardTextLeft}>calma...</Text>
         </LinearGradient>
-      </TouchableOpacity>
       </Link>
 
 
-      <Link href={'../inHome/calmDown'}>
-      <TouchableOpacity style={styles.card}>
+      <Link href={'../inHome/consultas'} style={styles.card}>
         <LinearGradient 
             colors={['#000', '#272727']} 
             style={styles.card}
             start={{ x: 0, y: 0 }} 
             end={{ x: 1, y: 1 }}
             >
-          <Text style={styles.cardTextRight}>calma...</Text>
+          <Text style={styles.cardTextRight}>consultas</Text>
           <Image source={require('../assets/img/linie_nerd.png')} style={styles.image}/>
         </LinearGradient>
-      </TouchableOpacity>
       </Link>
 
-      <Link href={'../inHome/calmDown'}>
-      <TouchableOpacity style={styles.card}>
+      <Link href={'../inHome/help'} style={styles.card}>
         <LinearGradient 
             colors={['#000', '#272727']}
             style={styles.card}
@@ -56,7 +51,6 @@ return (
           <Image source={require('../assets/img/linie_sad.png')} style={styles.image}/>
           <Text style={styles.cardTextLeft}>ajuda</Text>
         </LinearGradient>
-      </TouchableOpacity>
       </Link>
       
     </View>
@@ -81,37 +75,39 @@ cardContainer: {
   flexDirection: 'row',
   flexWrap: 'wrap',
   justifyContent: 'space-between',
+
 },
 card: {
-  width: '100%',
+  width: 350,
   height: 170,
   padding: 20,
   margin: 10,
-  marginLeft: 3 ,
-  marginRight: 10,
+  marginTop: 10,
   borderRadius: 10,
   flexDirection: 'row',
   alignItems: 'center',
 },
 image: {
-  width: 150,
-  height: 150,
+  width: 120,
+  paddingLeft: 20,
+  height: 120,
   fontSize: 30,
 },
 cardTextLeft: {
+  paddingLeft: 50,
+  paddingRight: 50,
+  justifyContent: 'center',
   fontSize: 30,
- 
   fontWeight: 'bold',
   color: 'white'
 },
 cardTextRight: {
   fontSize: 30,
-
+  paddingRight: 20,
   fontWeight: 'bold',
   color: 'white'
 },
 });
-
 
 
 export default Home;

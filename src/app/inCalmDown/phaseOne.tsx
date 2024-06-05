@@ -1,19 +1,11 @@
 import {StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { Link } from 'expo-router';
 
-export default function Help() {
+export default function PhaseOne() {
   return (
     <View style={styles.container}>
-    <Text>tela de videos</Text>
-    
-
-    <Link href={'../(tabs)/'} asChild>
-    <TouchableOpacity>
-    <Text>voltar</Text>
-    </TouchableOpacity>
-    </Link>
-</View>
-
+    <Text>fase 1</Text>
+    </View>
 )};
 
 const styles = StyleSheet.create({

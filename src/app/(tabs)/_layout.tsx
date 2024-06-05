@@ -1,7 +1,7 @@
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { Tabs, Stack } from 'expo-router';
-import { Foundation,Ionicons } from '@expo/vector-icons'
+import { Tabs } from 'expo-router';
+import { Foundation, Ionicons } from '@expo/vector-icons'
 
 export default function TabLayout() {
   return (
@@ -29,7 +29,7 @@ export default function TabLayout() {
             />
       <Tabs.Screen name="search"
           options={{
-            title: "pesquisar",
+            title: "Pesquisar",
             tabBarIcon: ({size, color}) => <Ionicons name="search" size={size} color={color}/>
             }}
             />

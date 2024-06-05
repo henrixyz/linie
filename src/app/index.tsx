@@ -24,7 +24,7 @@ export default function App() {
 
       <Link href='stackInit/login' asChild>
       <TouchableOpacity>
-        <Text style={styles.btmInit}>Já tem? Entrar</Text>
+        <Text style={styles.btmInit}>Já possui? Entrar</Text>
       </TouchableOpacity>
       </Link>
       {/* <Link href='(tabs)/profile' style={styles.btmEnter}>já tem login? entrar</Link> */}
@@ -68,13 +68,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   btmInit:{
-    width:250,
+    width:200,
     height:50,
-    backgroundColor:'#000000',
+    backgroundColor:'black',
     borderRadius:10,
     marginBottom:20,
     color:'white',
-    textAlign:'center',
-    alignItems: 'center'
+    textAlign:'center'
   }
 });
