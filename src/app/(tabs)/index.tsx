@@ -11,7 +11,7 @@ const Home = () => {
 
 return (
   <View style={styles.container}>
-    <StatusBar backgroundColor='white'/>
+    <StatusBar backgroundColor='black'/>
     <Slot/>
     
     <View style={styles.cardContainer}>
@@ -29,7 +29,7 @@ return (
       </Link>
 
 
-      <Link href={'../inHome/consultas'} style={styles.card}>
+      <Link href={'../(tabs)/mensage'} style={styles.card}>
         <LinearGradient 
             colors={['#000', '#272727']} 
             style={styles.card}
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
 container: {
   flex: 1,
   alignItems: 'center',
-  justifyContent: 'center',
+
   backgroundColor: '#EDEDED',
 },
 header: {

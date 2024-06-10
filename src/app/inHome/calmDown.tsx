@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import React, { useRef } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import { Link } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';

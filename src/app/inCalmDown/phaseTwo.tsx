@@ -1,11 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useRef } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity, Button, Animated, Easing } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity,Button, Animated, Easing } from 'react-native';
+import { Link } from 'expo-router';
+import { LinearGradient } from 'expo-linear-gradient';
 
-export default function PhaseOne() {
+export default function PhaseTwo() {
   const translateY = useRef(new Animated.Value(0)).current;
   const color = useRef(new Animated.Value(0)).current; 
-  
   const slideDown = () => {
     Animated.parallel([
       Animated.timing(translateY, {
@@ -25,7 +26,6 @@ export default function PhaseOne() {
           duration: 5000, 
           useNativeDriver: true,
         })
-
       ])
     ]).start();
   };
@@ -39,7 +39,6 @@ export default function PhaseOne() {
     <View style={styles.container}>
       <Animated.View style={[styles.dimScreen, { transform: [{ translateY }], backgroundColor }]} />
       <Button title="Slide Down Screen" onPress={slideDown} />
-
     </View>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Tabs } from 'expo-router';
-import { Foundation, Ionicons } from '@expo/vector-icons'
+import { Foundation, Ionicons, MaterialIcons } from '@expo/vector-icons'
 
 export default function TabLayout() {
   return (
@@ -42,7 +42,7 @@ export default function TabLayout() {
       <Tabs.Screen name="profile" 
           options={{
             title: "Usuário",
-            tabBarIcon: ({size, color}) => <Ionicons name="push" size={size} color={color}/>
+            tabBarIcon: ({size, color}) => <MaterialIcons name="person" size={size} color={color}/>
             }}
             />
     </Tabs>

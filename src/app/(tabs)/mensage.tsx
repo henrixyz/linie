@@ -1,32 +1,54 @@
 import { Stack, Tabs } from 'expo-router';
 import { View, Text, TouchableOpacity, StyleSheet  } from 'react-native';
 import { Link } from 'expo-router';
-import { LinearGradient } from 'expo-linear-gradient';
+import { MaterialIcons } from '@expo/vector-icons'
+
 
 export default function Mensage() {
   return (
     <View style={styles.container}>
 
         <Link href={'../inMensage/conversas'} style={styles.card}>
+        <MaterialIcons name="person" size={24} color="white" style={styles.image} />
         <TouchableOpacity >
-        <Text >pessoa 1</Text>
+        
         </TouchableOpacity>
         </Link>
 
 
-        <Link href={'../inMensage/conversas'}>
-        <TouchableOpacity>
-        <Text>pessoa 2</Text>
+        <Link href={'../inMensage/conversas'} style={styles.card}>
+        <MaterialIcons name="person" size={24} color="white" style={styles.image} />
+        <TouchableOpacity >
         </TouchableOpacity>
         </Link>
-        <Link href={'../inMensage/conversas'}>
-        <TouchableOpacity>
-        <Text>pessoa 3</Text>
+
+        <Link href={'../inMensage/conversas'} style={styles.card}>
+        <MaterialIcons name="person" size={24} color="white" style={styles.image} />
+        <TouchableOpacity >
         </TouchableOpacity>
         </Link>
-        <Link href={'../inMensage/conversas'}>
-        <TouchableOpacity>
-        <Text>pessoa 4</Text>
+
+        <Link href={'../inMensage/conversas'} style={styles.card}>
+        <MaterialIcons name="person" size={24} color="white" style={styles.image} />
+        <TouchableOpacity >
+        </TouchableOpacity>
+        </Link>
+
+        <Link href={'../inMensage/conversas'} style={styles.card}>
+        <MaterialIcons name="person" size={24} color="white" style={styles.image} />
+        <TouchableOpacity >
+        </TouchableOpacity>
+        </Link>
+
+        <Link href={'../inMensage/conversas'} style={styles.card}>
+        <MaterialIcons name="person" size={24} color="white" style={styles.image} />
+        <TouchableOpacity >
+        </TouchableOpacity>
+        </Link>
+
+        <Link href={'../inMensage/conversas'} style={styles.card}>
+        <MaterialIcons name="person" size={24} color="white" style={styles.image} />
+        <TouchableOpacity >
         </TouchableOpacity>
         </Link>
     </View>
@@ -36,7 +58,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
     backgroundColor: '#EDEDED',
   },
   header: {
@@ -47,38 +68,31 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-  
   },
   card: {
-    width: 350,
+    width: "90%",
     height: 70,
     backgroundColor: '#000',
-    padding: 20,
-    margin: 10,
+    padding: 10,
     marginTop: 10,
     borderRadius: 10,
     flexDirection: 'row',
     alignItems: 'center',
   },
   image: {
-    width: 120,
-    paddingLeft: 20,
-    height: 120,
+    margin: 10,
+    paddingTop: 10,
     fontSize: 30,
   },
   cardTextLeft: {
-    paddingLeft: 50,
+    width: 90,
+    height: 50,
     paddingRight: 50,
     justifyContent: 'center',
     fontSize: 30,
     fontWeight: 'bold',
+    backgroundColor: '#dedede',
     color: 'white'
-  },
-  cardTextRight: {
-    fontSize: 30,
-    paddingRight: 20,
-    fontWeight: 'bold',
-    color: 'white'
-  },
+  }
   });
   

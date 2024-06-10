@@ -8,9 +8,9 @@ export default function App() {
        <StatusBar backgroundColor="#000000"/>
 
       {/* <View style={styles.image} ></View> */}
-      <Image source={require('./assets/img/linie_workout.png')} style={styles.image}/>
+      <Image source={require('./assets/img/linie_default.png')} style={styles.image}/>
 
-      <Text style={styles.header} > Seja Bem-Vindo! </Text>
+      <Text style={styles.header} > Bem-Vindo! </Text>
       <View style={styles.trecho}>
 
       {/* <Link href='stackInit/signin' style={styles.btmInit}>Criar uma conta</Link>
@@ -42,9 +42,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   image:{
-    width: 200,
-    height: 200,
-    marginTop: 70,
+    width: 150,
+    height: 150,
+    marginTop: 120,
 
   },
   header:{
