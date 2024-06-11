@@ -5,17 +5,13 @@ import { StatusBar } from 'expo-status-bar';
 import { MaterialIcons } from '@expo/vector-icons';
 
 export default function Chat() {
+  const Send = () => {
+    // alert (msg)
+  }
   return (
+
     <View style={styles.container}>
-      <StatusBar backgroundColor='white'/>
-      <Link href={'../inSearch/searching'} style={styles.icon}>
-        <MaterialIcons name="send" size={24} color="black"  />
-      </Link>
-        <TextInput placeholder="digite aqui" style={styles.card}>
-        </TextInput>
-        
-       
-        
+    <StatusBar backgroundColor='white'/>
         <Link href={'../(tabs)/mensage'}>
         <TouchableOpacity>
         <Text>voltar</Text>
@@ -26,6 +22,17 @@ export default function Chat() {
         <Text>tela pagamento</Text>
         </TouchableOpacity>
         </Link>
+
+      
+    
+    <TouchableOpacity style={styles.icon} onPress={()=>Send()}>
+      <MaterialIcons name="send" size={24} color="#000"  />
+    </TouchableOpacity>
+  
+      <TextInput placeholder="Digite sua mensagem" style={styles.movedView}>
+      </TextInput>
+
+
     </View>
 
   )};
@@ -38,11 +45,16 @@ export default function Chat() {
       justifyContent: 'center',
     },
     icon: {
-      padding: 12,
-      paddingLeft:22,
-  
+      width: 40,
+      height: 40,
+      padding: 12, 
+      position: 'relative',
+      top: 675,
+      left: 200,
+      borderRadius: 100,
+      
     },
-    card:{
+    movedView:{
       width:'80%',
       height:'7%',
       paddingLeft:25,
@@ -50,6 +62,8 @@ export default function Chat() {
       fontSize: 15,
       color: 'black',
       borderRadius: 30,
-  
+      marginTop: 630,
+      position: 'relative',
+      right: 30,
     }
     })
